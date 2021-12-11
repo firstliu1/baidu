@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<script src="js/jquery.js"></script>
+		<script src="./js/flexible.js"></script>
+		<title>百度</title>
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			body {
+				min-width: 1200px;
+				max-width: 1600px;
+				min-height:800px;
+				width: 100%;
+				height: 100vh;
+				font-size: 0.2rem;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			.top {
+				width: 26rem;
+				height: 0.613rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-around;
+				line-height: 0.6rem;
+				margin-top: 0.5rem;
+			}
+
+			.zuo {
+				width: 37%;
+				height: 100%;
+				display: flex;
+				justify-content: space-around;
+				font-size: 0.25rem;
+			}
+
+			.zhong {
+				width: 45%;
+				height: 100%;
+			}
+
+			.you {
+				width: 15%;
+				height: 100%;
+				text-align: right;
+				display: flex;
+			}
+
+			a:hover {
+				text-decoration: none;
+				cursor: pointer;
+				color: #0000FF;
+			}
+
+			.you a:nth-child(2) {
+				display: block;
+				width: 1rem;
+				height: 0.5rem;
+				background-color: #0000FF;
+				color: white;
+				text-align: center;
+				line-height: 0.5rem;
+				float: left;
+				margin-left: 0.5rem;
+				border-radius: 0.1rem;
+				margin-top: 0.05rem;
+			}
+
+			.you a:nth-child(1) {
+				float: left;
+				margin-left: 1.2rem;
+			}
+
+			.img {
+				display: block;
+				margin: 0 auto;
+				width: 4.5rem;
+				margin-top: 2rem;
+			}
+
+			.sousuo {
+				margin: 0 auto;
+				width: 14rem;
+				height: 1rem;
+				border: 0.05rem solid gainsboro;
+				border-radius: 0.2rem;
+				margin-top: 0.5rem;
+				display: flex;
+				border-right: 0px;
+
+			}
+
+			.sousuo input {
+				width: 75%;
+				height: 100%;
+				border-radius: 0.2rem;
+				border: 0px;
+				font-size: 0.4rem;
+			}
+
+			.sousuo div:nth-child(2) {
+				width: 6%;
+				height: 50%;
+				color: gainsboro;
+				font-size: 0.5rem;
+				line-height: 1rem;
+			}
+			.sousuo div:nth-child(2):hover{
+				color: #4E6EF2;
+			}
+
+			.sousuo div:nth-child(3) {
+				width: 20%;
+				height: 110%;
+				margin-top: -0.05rem;
+				background-color: #4e6ef2;
+				border-bottom-right-radius: 0.2rem;
+				border-top-right-radius: 0.2rem;
+				color: white;
+				font-size: 0.4rem;
+				text-align: center;
+				line-height: 1rem;
+			}
+			.sousuo div:nth-child(3):hover{
+				cursor: pointer;
+			}
+
+			@font-face {
+				font-family: "iconfont";
+				/* Project id 2946108 */
+				src: url('//at.alicdn.com/t/font_2946108_ds7x61ktge.woff2?t=1639207809825') format('woff2'),
+					url('//at.alicdn.com/t/font_2946108_ds7x61ktge.woff?t=1639207809825') format('woff'),
+					url('//at.alicdn.com/t/font_2946108_ds7x61ktge.ttf?t=1639207809825') format('truetype');
+			}
+
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 16px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			.icon-huanyihuan:before {
+				content: "\e635";
+			}
+
+			.icon-xiangji:before {
+				content: "\e8bc";
+			}
+
+			.resou {
+				margin: 0 auto;
+				width: 14rem;
+				height: 4rem;
+				margin-top: 1rem;
+			}
+
+			.biaoti {
+				width: 100%;
+				height: 0.5rem;
+				display: flex;
+				flex-flow: row;
+				float: left;
+			}
+
+			.biaoti-zuo{
+				width: 10%;
+				display: flex;
+			}
+			.biaoti-zuo:hover{
+				color: #4E6EF2;
+			}
+			.biaoti-zuo span:nth-child(1) {
+				display: block;
+				font-size: 0.3rem;
+				font-weight: bold;
+			}
+
+			.biaoti-zuo span:nth-child(2) {
+				display: block;
+				width: 0.14rem;
+				height: 0.14rem;
+				border-right: 0.043rem solid gray;
+				border-bottom: 0.043rem solid gray;
+				transform: rotate(-45deg);
+				margin-top: 0.1rem;
+			}
+
+			.biaoti div:nth-child(2) {
+				display: block;
+				width: 82%;
+			}
+			.biaoti-you{
+				color: #808080;
+				width:8%;
+				height:100%;
+				display: flex;
+				line-height:0.5rem;
+			}
+			.biaoti-you span:first-child{
+				display: block;
+				font-size: 0.3rem;
+				font-weight: bold;
+			}
+
+			.biaoti-you span:nth-child(2) {
+				display: block;
+				font-size: 0.24rem;
+				font-weight: bold;
+			}
+			.biaoti-you:hover{
+				color: #4E6EF2!important;
+			}
+			.xinwen{
+				float: left;
+				width: 101.2%;
+				height: 80%;
+				margin-left:-0.1rem;
+				
+			}
+			.xinwen-tiao{
+				margin-top:0.2rem;
+				margin-left: 0.1rem;
+				width:49%;
+				height:20%;
+				float: left;
+				display: flex;
+				text-align: left;
+				line-height:0.6rem;
+				font-size: 0.3rem;
+			}
+			.xinwen-tiao span:nth-child(1){
+				display: block;
+				width:0.5rem;
+				height:100%;
+			}
+			.one{
+				color: #fe2d46;
+			}
+			.two{
+				color: #ff6600;
+			}
+			.san{
+				color:#faa90e;
+			}
+			.si{
+				color: #9195a3;
+			}
+			.xinwen-tiao a{
+				display: block;
+				height:100%;
+			}
+			.xinwen-tiao a:hover{
+				text-decoration: underline;
+				
+			}
+			.r{
+				margin-top: 0.13rem;
+				margin-left:0.3rem;
+				border-radius: 0.1rem;
+				line-height: 0.4rem;
+				color: white;
+				width:0.3rem;
+				height: 0.35rem;
+				font-size:0.2rem;
+				background-color:#ff6600 ;
+				text-align: left!important;
+			}
+			.di{
+				width: 26rem;
+				height: 0.613rem;
+				margin: 0 auto;
+				position: absolute;
+				bottom: 1rem;
+				margin-left:-6rem;
+				color: #BBBBBB;
+				line-height:0.613rem;
+				font-size: 0.23rem;
+			}
+			.di a:nth-child(1){
+				margin-left:1.2rem;
+			}
+			.di a{
+				margin-left:0.3rem;
+			}
+			.di:hover{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="zuo">
+				<a>新闻</a>
+				<a>hao123</a>
+				<a>地图</a>
+				<a>视频</a>
+				<a>贴吧</a>
+				<a>学术</a>
+				<a>更多</a>
+			</div>
+			<div class="zhong"></div>
+			<div class="you">
+				<a>设置</a>
+				<a>登录</a>
+			</div>
+		</div>
+		<img class="img" src="https://www.baidu.com/img/flexible/logo/pc/result@2.png" />
+		<div class="sousuo">
+			<input />
+			<div class="iconfont icon-xiangji"></div>
+			<div>百度一下</div>
+		</div>
+		<div class="resou">
+			<div class="biaoti">
+				<div class="biaoti-zuo">
+					<span>百度热搜</span>
+					<span></span>
+				</div>
+				<div></div>
+				<div class="biaoti-you">
+					<span class="iconfont icon-huanyihuan"></span>
+					<span>换一换</span>
+				</div>
+			</div>
+			<div class="xinwen">
+				<div class="xinwen-tiao">
+					<span class="one">1</span>
+					<a>十九届六中全会引起热烈反响</a>
+					<div class="r">
+						<span>热</span>
+					</div>
+				</div>
+				<div class="xinwen-tiao">
+					<span class="si">4</span>
+					<a>教授回应知网道歉:应拿出整改措施</a>
+					<div class="r">
+						<span>热</span>
+					</div>
+				</div>
+				<div class="xinwen-tiao">
+					<span class="two">2</span>
+					<a>31省区市新增本土确诊51例</a>
+					<div class="r">
+						<span>热</span>
+					</div>
+				</div>
+				<div class="xinwen-tiao">
+					<span class="si">5</span>
+					<a>中国加入世贸组织二十周年</a>
+					<div class="r">
+						<span>热</span>
+					</div>
+				</div>
+				<div class="xinwen-tiao">
+					<span class="san">3</span>
+					<a>各地贯彻十九届六中全会精神纪实</a>
+					<div class="r">
+						<span>热</span>
+					</div>
+				</div>
+				<div class="xinwen-tiao">
+					<span class="si">6</span>
+					<a>夫妻身亡留八个孩子:去年刚办酒席</a>
+				</div>
+			</div>
+			<div class="di">
+				<a>关于百度</a>
+				<a>About Baidu</a>
+				<a>使用百度前必读</a>
+				<a>帮助中心</a>
+				<a>京公网安备11000002000001号</a>
+				<a>京IPC证030173号</a>
+				<a>@2021 Baidu</a>
+				<a>互联网药品信息服务资格证书(京)经营性-2017-0020</a>
+				<a>信息网络传播视听节目许可证0110516</a>
+			</div>
+		</div>
+	</body>
+</html>
